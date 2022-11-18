@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import Head from "next/head";
 import InfoCard from "../components/Infocard";
 
@@ -19,7 +18,7 @@ const Home: NextPage = () => {
           </h4>
         </div>
         <div className="flex flex-col gap-10">
-          <button>
+          <button className="shadow-lg transition ease-in-out hover:scale-110 duration-150">
             <a href="https://github.com/Stark-program" target="_blank" >
               <InfoCard
                 topic={"My Github"}
@@ -27,7 +26,7 @@ const Home: NextPage = () => {
               />
             </a>
           </button>
-          <button >
+          <button className="shadow-lg transition ease-in-out hover:scale-110 duration-150">
             <a href="/projects">
               <InfoCard
                 topic={"My Projects"}
@@ -35,7 +34,7 @@ const Home: NextPage = () => {
               />
             </a>
           </button>
-          <button >
+          <button className="shadow-lg transition ease-in-out hover:scale-110 duration-150">
             <a href="/resume.pdf">
               <InfoCard
                 topic={"My Resume"}
