@@ -5,48 +5,53 @@ import InfoCard from "../components/Infocard";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen bg-[#999999] flex-col items-center justify-center">
+    <div className="flex min-h-screen bg-gradient-to-br from-neutral-500 to-neutral-200 flex-col">
       <Head>
-        <title>Stark Portfolio</title>
+        <title>Chad Stark | Portfolio</title>
       </Head>
-
-      <main className="flex w-full h-full flex-col md:flex-row md:space-x-96 items-center justify-center px-20 text-center">
-        <div>
+      <main className="flex flex-col md:flex-row md:space-x-96 mx-auto my-auto px-20 text-left">
+        <div className="my-auto">
           <h1 className="text-[80px] md:text-[130px] font-Calistoga">
             Chad Stark
           </h1>
-          <h4 className="text-[30px] md:text-[40px] font-Calistoga">
+          <h4 className="text-[30px] md:text-[40px] pl-4 font-Calistoga">
             Fullstack Developer
           </h4>
         </div>
-        <div className="flex flex-col space-y-10 my-4">
-          <Link href="https://github.com/Stark-program">
-            <InfoCard
-              topic={"My Github"}
-              about={"Click here to visit my github profile."}
-            />
-          </Link>
-          <Link href="/projects">
-            <InfoCard
-              topic={"My Projects"}
-              about={"Click here to visit some of my hosted projects."}
-            />
-          </Link>
-          <Link href="/resume.pdf">
-            <InfoCard
-              topic={"My Resume"}
-              about={"Click here for a copy of my resume."}
-            />
-          </Link>
+        <div className="flex flex-col gap-10">
+          <button>
+            <a href="https://github.com/Stark-program" target="_blank" >
+              <InfoCard
+                topic={"My Github"}
+                about={"Click here to visit my github profile."}
+              />
+            </a>
+          </button>
+          <button >
+            <a href="/projects">
+              <InfoCard
+                topic={"My Projects"}
+                about={"Click here to visit some of my hosted projects."}
+              />
+            </a>
+          </button>
+          <button >
+            <a href="/resume.pdf">
+              <InfoCard
+                topic={"My Resume"}
+                about={"Click here for a copy of my resume."}
+              />
+            </a>
+          </button>
         </div>
       </main>
 
-      <footer className="flex flex-row w-full mt-auto items-center justify-center border-t">
+      <footer className="flex flex-row w-full mt-auto py-4 items-center justify-center border-t">
         <p className="w-full text-center">
           Questions? Contact me at:{" "}
-          <span className="font-bold underline ml-1 ">
+          <a className="font-bold underline ml-1 " href="mailto:chadrenstark@gmail.com">
             chadrenstark@gmail.com
-          </span>
+          </a>
         </p>
       </footer>
     </div>
